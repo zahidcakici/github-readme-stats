@@ -5,14 +5,14 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 import { debug, setFailed } from "@actions/core";
-import github from "@actions/github";
+import * as github from "@actions/github";
 import ColorContrastChecker from "color-contrast-checker";
 import { info } from "console";
 import Hjson from "hjson";
 import snakeCase from "lodash.snakecase";
 import parse from "parse-diff";
 import { inspect } from "util";
-import { isValidHexColor, isValidGradient } from "../src/common/utils.js";
+import { isValidHexColor, isValidGradient } from "../src/common/color.js";
 import { themes } from "../themes/index.js";
 import { getGithubToken, getRepoInfo } from "./helpers.js";
 
